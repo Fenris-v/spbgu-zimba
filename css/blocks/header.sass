@@ -1,0 +1,73 @@
+.header
+  display: flex
+  justify-content: space-between
+  align-items: center
+
+  &__langs
+    display: flex
+    align-items: center
+
+    a
+      +center
+      width: 58px
+      height: 58px
+      @include font($textBlack, $bold, 600, 12px)
+      text-decoration: none
+      border: 1px solid $grey
+      text-transform: uppercase
+
+      &:not(:last-child)
+        border-right: none
+
+      &.active
+        background: $grey
+        color: rgba(0, 0, 0, 0.5)
+
+  &__socials
+    display: flex
+    align-items: center
+
+    a
+      background: $red
+      +center
+      width: 60px
+      height: 60px
+      @include font($textBlack, $bold, 600, 12px)
+      text-decoration: none
+      margin-right: 10px
+
+.logo
+  a
+    display: flex
+    @include font($textBlack, $bold, 600, 16px, 1.6)
+    max-width: 400px
+    align-items: center
+    text-decoration: none
+
+    img
+      flex-shrink: 0
+      margin-right: 20px
+
+.nav__menu
+  +space-nw
+
+  ul
+    +space-nw
+    flex-grow: 1
+
+    a
+      @include font($white, $regular, 400, 12px, 50px)
+      text-transform: uppercase
+      text-decoration: none
+
+  .search
+    width: 300px
+    flex-shrink: 0
+    display: flex
+    justify-content: flex-end
+    align-items: center
+    @include font($white, $regular, 400, 13px, 20px)
+
+    img
+      margin-right: 15px
+      width: 17px

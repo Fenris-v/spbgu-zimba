@@ -1,0 +1,116 @@
+body
+  max-width: 100%
+  overflow-x: hidden
+  display: flex
+  flex-direction: column
+  @include font()
+  margin: 0
+
+  .wrapper
+    max-width: 1330px
+    padding: 0 15px
+    +box
+    margin: 0 auto
+
+    &_fullHD
+      max-width: 1920px
+      margin: 0 auto
+      position: relative
+
+p
+  margin: 0
+
+.innerTitle
+  @include font($textBlack, $bold, 600, 32px, 1)
+  margin: 0 0 70px
+  padding: 0 0 30px
+  border-bottom: 1px solid #EBEBEB
+  position: relative
+
+  &::after
+    content: ''
+    position: absolute
+    width: 100px
+    left: 0
+    bottom: -1px
+    background: red
+    height: 1px
+
+.btn
+  display: inline-flex
+  padding: 0 55px
+  @include font($white, $regular, 400, 12px, 60px)
+  white-space: nowrap
+  text-decoration: none
+  +transition
+  +box
+  text-transform: uppercase
+
+  &:hover
+    +transition
+
+  &_red
+    background: $red
+
+  &_grey
+    background: $grey
+    color: $red
+    width: 100%
+    justify-content: center
+
+.slick-slide
+  &:focus
+    outline: none
+
+.slick-dots
+  padding: 0
+  +center
+  list-style: none
+  margin: 90px 0 0
+
+  li
+    width: 30px
+    +center
+
+    button
+      padding: 0
+      font-size: 0
+      border: none
+      background: #9F9F9F
+      width: 12px
+      height: 12px
+      +border-radius(6px)
+      opacity: 0.2
+      +transition
+
+      &:focus
+        outline: none
+
+    &.slick-active
+      button
+        +transition
+        width: 100%
+        background: #FECA8B
+        opacity: 1
+
+.slick-arrow
+  border: none
+  background: none
+  position: absolute
+  cursor: pointer
+  top: -190px
+
+  &:focus
+    outline: none
+
+  &.slick-next
+    right: 0
+    +transform(rotate(180deg))
+
+  &.slick-prev
+    right: 90px
+
+.no_list
+  padding: 0
+  margin: 0
+  list-style: none
