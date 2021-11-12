@@ -1,0 +1,47 @@
+@media only screen and (max-width: 1000px)
+  .nav__menu
+    display: none
+
+  .adventures
+    grid-template-columns: repeat(1, 1fr)
+
+  .hello
+    flex-direction: column
+
+    &_part
+      &:first-child
+        display: flex
+        margin-bottom: 30px
+
+        > img
+          position: static
+          width: 100%
+
+      &:last-child
+        max-width: 100%
+        margin-left: 0
+
+    &__download
+      right: 0
+
+  .news
+    flex-direction: column
+
+    &_left, &_right
+      width: 100%
+
+    &_left
+      margin-bottom: 30px
+
+    &_right
+      padding-left: 0
+
+  .org
+    grid-template-columns: repeat(1, 1fr)
+
+  .contacts
+    flex-direction: column
+
+    &_left
+      margin-bottom: 30px
+      margin-right: 0
